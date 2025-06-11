@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guichê - Chama Senha - Etec 029</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="m-0 p-0 justify-items-center">
+    <div class="flex flex-col text-center mt-3 h-screen">
+        <p class="w-full text-center text-3xl font-bold">
+            Você está conectado como Guichê <span id="numero_guiche" class="bg-red-600 text-white px-5 py-2 rounded-full"></span>
+        </p>
+        <div class="flex flex-col gap-4">
+            <p class="text-center text-7xl uppercase w-full mt-2">A próxima senha é</p>
+            <p id="proxima_senha" class="text-[150pt] font-bold leading-none text-blue-500 font-mono">?</p>
+            <div class="greid grid-cols-3 gap-4 content-end">
+                <button type="button"
+                class="rounded-md bg-red-800 py-2 px-4 border border-transparent text-center text-3xl text-white 
+                transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 
+                hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 
+                disabled:shadow-none ml-2 cursor-pointer h-25"
+                onclick="voltar()">Voltar</button>
+                <button type="button"
+                class="rounded-md bg-red-800 py-2 px-4 border border-transparent text-center text-3xl text-white 
+                transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 
+                hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 
+                disabled:shadow-none ml-2 cursor-pointer w-1/2 h-56"
+                onclick="chama_senha()">Chamar Senha</button>
+                <button type="button"
+                class="rounded-md bg-red-800 py-2 px-4 border border-transparent text-center text-3xl text-white 
+                transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 
+                hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 
+                disabled:shadow-none ml-2 cursor-pointer h-25"
+                onclick="avancar()">Avançar</button>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/guiche.js"></script>
+</body>
+</html>

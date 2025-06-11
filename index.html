@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chama Senha - Etec 029</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="m-0 p-0  justify-items-center">
+    <div class="h-screen w-1/2 flex flex-col gap-4 items-center">
+        <p class="text-sm leading-none mt-3">Sistema de chamada de senhas</p>
+        <img src="./logo-etec.png" class="w-1/2">
+        <p class="text-center text-5xl uppercase font-bold w-full items-center text-teal-800 leading-none">Conectar como</p>
+        <div class="grid grid-cols-2 gap-4 items-center">
+            <button type="button"
+            class="rounded-md h-25 w-full bg-red-800 py-2 px-4 border border-transparent text-center text-3xl text-white 
+            transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 
+            hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 
+            disabled:shadow-none ml-2 cursor-pointer w-full"
+            onclick="open_guiche()">Guichê</button>
+            <button type="button"
+            class="rounded-md h-25 bg-red-800 py-2 px-4 border border-transparent text-center text-3xl text-white 
+            transition-all shadow-md hover:shadow-lg focus:bg-red-700 focus:shadow-none active:bg-red-700 
+            hover:bg-red-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 
+            disabled:shadow-none ml-2 cursor-pointer w-full"
+            onclick="open_painel()">Painel</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/guiche.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Chama Senha - Etec 029</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body class="m-0 p-0 justify-items-center grid grid-cols-3">
+    <div class="flex flex-wrap items-center justify-items-center px-2 ">
+        <img src="./logo-etec.png" class="w-full" id="logo">
+    </div>
+    <div class="flex flex-col gap-4 w-full col-span-2">
+        <div id="senha_atual" class="grid grid-cols-1 justify-items-center text-red-600">
+            <p id="senha" class="text-[50vh] leading-none font-bold font-mono blink bg-red-600 text-white rounded-full px-12 py-4">00</p>
+            <p class="font-bold text-7xl">Guichê <span id="numero_guiche" class="font-mono">0</span></p>
+        </div>
+        <p class="mt-[10%] uppercase text-center">Senhas anteriores</p>
+        <div id="senhas_anteriores" class="grid grid-cols-4  justify-items-center">
+            <div class="grid grid-cols-1 justify-items-center">
+                <p id="senha_anterior[4]" class="bg-black text-4xl text-white rounded-full px-4 py-4 font-mono">00</p>
+                <p class="font-bold text-4xl">Guichê <span id="guiche_anterior[4]" class="font-mono">0</span></p>
+            </div>
+            <div class="grid grid-cols-1 justify-items-center">
+                <p id="senha_anterior[3]" class="bg-black text-4xl text-white rounded-full px-4 py-4 font-mono">00</p>
+                <p class="font-bold text-4xl">Guichê <span id="guiche_anterior[3]" class="font-mono">0</span></p>
+            </div>
+            <div class="grid grid-cols-1 justify-items-center">
+                <p id="senha_anterior[2]" class="bg-black text-4xl text-white rounded-full px-4 py-4 font-mono">00</p>
+                <p class="font-bold text-4xl">Guichê <span id="guiche_anterior[2]" class="font-mono">0</span></p>
+            </div>
+            <div class="grid grid-cols-1 justify-items-center">
+                <p id="senha_anterior[1]" class="bg-black text-4xl text-white rounded-full px-4 py-4 font-mono">00</p>
+                <p class="font-bold text-4xl">Guichê <span id="guiche_anterior[1]" class="font-mono">0</span></p>
+            </div>
+        </div>
+    </div>
+    <audio id="notificacao" src="/ringtone-notification-2x.mp3"></audio>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/painel.js"></script>
+</body>
+</html>
